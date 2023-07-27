@@ -1,0 +1,23 @@
+<div class="card mt-5 mx-auto">
+  <div class="card-body">
+    <h4 class="text-3xl text-center my-2">Editar Escuela Profesional</h4>
+    <form #schoolForm="ngForm" (ngSubmit)="submitForm(schoolForm)">
+      <input type="hidden" name="id" [(ngModel)]="schoolService.selectSchool.id">
+      <div class="form-group mb-3">
+        <input type="text" class="form-control" name="name" [(ngModel)]="schoolService.selectSchool.name"
+          placeholder="Nombres">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary me-2 text-black font-semibold" type="submit">
+          <i class="fas fa-plus-circle"></i> Editar
+        </button>
+        <button class="btn btn-secondary me-2 text-black font-semibold" type="reset" (click)="resetForm(schoolForm)">
+          <i class="fas fa-sync-alt"></i> Limpiar
+        </button>
+        <button class="btn btn-secondary text-black font-semibold" type="button" routerLink="/">
+          <i class="fas fa-hand-point-left"></i> Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

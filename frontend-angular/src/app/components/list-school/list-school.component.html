@@ -1,0 +1,43 @@
+<div class="container wrapper">
+  <div class="row">
+    <!-- table -->
+    <div class="col-md-12">
+      <div class="inner">
+        <h1 class="flex justify-center text-center text-3xl font-bold p-2">Lista de las Escuelas Profesionales</h1>
+        <table class="mx-auto">
+          <div class="relative h-11">
+            <a class="btn btn-primary text-white add absolute right-0" routerLink="add-school">
+              <i class="pi pi-plus" style="font-size: 1rem"></i> Agregar
+            </a>
+          </div>
+
+          <thead class="table-thead">
+            <tr class="thead-tr">
+              <!--<th scope="col">#</th>-->
+              <th scope="col" class="thead-tr-th">Nombre</th>
+              <th scope="col" class="thead-tr-th">Fecha de registro</th>
+              <th scope="col" class="thead-tr-th">Action</th>
+            </tr>
+          </thead>
+          <tbody class="table-tbody">
+            <tr *ngFor="let item of schoolList" class="tbody-tr">
+              <!-- table<th scope="row">{{item.id}}</th> -->
+              <td class="tbody-tr-td">{{item.name}}</td>
+              <td class="tbody-tr-td">{{ item.created_at | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+              <td class="tbody-tr-td-buttons">
+                <button (click)="onEdit(item)"
+                  class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition w-15 h-10">
+                  <i class="pi pi-pencil" style="font-size: 1rem"></i>
+                </button>
+                <button (click)="onDelete(item.id)"
+                  class="inline-flex items-center justify-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 focus:outline-none focus:border-red-700 focus:ring focus:ring-red-200 active:bg-red-600 disabled:opacity-25 transition w-15 h-10">
+                  <i class="pi pi-trash" style="font-size: 1rem"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

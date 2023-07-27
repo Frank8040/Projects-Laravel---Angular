@@ -1,0 +1,43 @@
+@import '~primeicons/primeicons.css';
+
+.table-thead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-tbody {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.thead-tr {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 0.5rem;
+}
+
+.thead-tr-th {
+  display: flex;
+  justify-content: center;
+}
+
+.tbody-tr {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 0.5rem;
+}
+
+.tbody-tr-td {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.tbody-tr-td-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
